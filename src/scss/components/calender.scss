@@ -1,0 +1,56 @@
+.calender {
+  padding: 3rem 12rem;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--afroshots {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      color: $primary-font-color-black;
+    }
+
+    &--btns {
+      display: flex;
+      width: 35%;
+      height: 4.3rem;
+      justify-content: space-between;
+    }
+
+    &--btn {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 3rem;
+      width: 19rem;
+      padding: 1.2rem 1rem;
+      border: none;
+      outline: none;
+      font-weight: 500;
+      font-size: 1.3rem;
+
+      &-transparent {
+        background: transparent;
+        color: $font-color-logo;
+        border: $font-color-logo 1.4px solid; 
+      }
+
+      &-yellow {
+        background: $font-color-logo;
+        color: #fff;
+        border: $font-color-logo 1.4px solid;
+      }
+    }
+  }
+
+  &__middle {
+
+  }
+
+  &__bottom {
+
+  }
+}

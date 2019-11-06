@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.7rem 10rem;
+  background: $primary-white;
+
+  &__name {
+
+    &--logo {
+      color: $font-color-logo;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+  }
+
+  &__menu {
+
+    &--list {
+      display: flex;
+      text-decoration: none;
+      list-style: none;
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: $primary-font-color-black;
+    }
+
+    &--listitem {
+      display: inline-block;
+      cursor: pointer;
+      margin: 0 1.5rem;
+      letter-spacing: .5px;
+    }
+
+    &--brownitem {
+      color: $font-color-gold
+    }
+  }
+}

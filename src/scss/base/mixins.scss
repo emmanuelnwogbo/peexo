@@ -1,0 +1,17 @@
+@mixin revealIcons {
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      transition: all .1s #{$i*.1}s cubic-bezier(0.165, 0.84, 0.44, 1);
+      animation: moveInDown  #{$i*.1}s ease-out;
+    }
+  }
+}
+
+@mixin portfolioCards {
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      transition: all .1s #{$i*.1}s cubic-bezier(0.165, 0.84, 0.44, 1);
+      animation: moveInDown  #{$i*.1}s ease-out;
+    }
+  }
+}

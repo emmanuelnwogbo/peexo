@@ -1,0 +1,35 @@
+$primary-white: #fff;
+$primary-font-color-black: #3d3d3d;
+$font-color-gold: rgb(183, 149, 11);
+$font-color-logo: #f7b731;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 70%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  background: $primary-white;
+
+  /*@media only screen and (max-width: 65.125em) {
+    overflow: scroll;
+    overflow-x: hidden;
+  }*/
+}
+
+.container {
+  position: relative;
+  width: 80vw;
+  margin: 0 auto;
+  padding-bottom: 4.7rem;
+}
