@@ -1,9 +1,6 @@
 const calenderBody = document.getElementById('calender-body');
 const calenderNavLeft = document.getElementById('calender-nav-left');
 const calenderNavRight = document.getElementById('calender-nav-right');
-/*const days = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-]*/
 const months = [
   "January",
   "February",
@@ -18,21 +15,19 @@ const months = [
   "November",
   "December"
 ];
+const today = new Date();
+const g_currentYear = today.getFullYear();
+const g_currentMonth = today.getMonth();
 const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-const daysNames = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday"
-];
 
-let beginning = 0;
-let limit = 3;
+let beginning = 9;
+let limit = 12;
 
 calenderNavLeft.addEventListener('click', e => {
+  if (beginning === 0) {
+    return;
+  }
+
   if (beginning > 0) {
     beginning -=3;
     limit -=3
@@ -43,6 +38,10 @@ calenderNavLeft.addEventListener('click', e => {
 });
 
 calenderNavRight.addEventListener('click', e => {
+  if (beginning === 9) {
+    return;
+  }
+
   if (beginning < 9) {
     beginning +=3;
     limit +=3
@@ -69,8 +68,45 @@ function appendMonths() {
           <span>Sat</span>
           <span>Sun</span>
         </div>
+        <div class='month__dates' id=${month}>
+        </div>
       </div>
     `);
+
+    insertDates(daysInMonth[months.indexOf(month)], month);
     }
   });
+}
+
+function insertDates(numOfDays, month) {
+  const mon = document.getElementById(month);
+  let num = 0;
+
+  while (num < numOfDays) {
+    num +=1;
+
+    if (num === getCurrentDay() && month === 'November') {
+      mon.insertAdjacentHTML('beforeend', `
+        <button class="today">
+          <time>${num}</time>
+        </button>
+      `)
+    }
+
+    mon.insertAdjacentHTML('beforeend', `
+      <button>
+        <time>${num}</time>
+      </button>
+    `)
+  }
+}
+
+function getCurrentDay() {
+  let today = new Date();
+  let thisMonth = today.getMonth();
+  let thisYear = today.getFullYear();
+  if (thisMonth === g_currentMonth && thisYear === g_currentYear) {
+    console.log(today.getDate())
+  	return today.getDate();
+  }  
 }

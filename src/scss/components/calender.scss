@@ -41,7 +41,7 @@
 
       &-yellow {
         background: $font-color-logo;
-        color: #fff;
+        color: $primary-white;
         border: $font-color-logo 1.4px solid;
       }
     }
@@ -76,7 +76,7 @@
         border-radius: 50%;
         height: 2rem;
         width: 2rem;
-        background: #3d3d3d;    
+        background: $primary-font-color-black;    
         display: inline-block;
         margin: 0 1rem;
         transform: translateY(-.2rem);
@@ -98,6 +98,78 @@
 .month {
   height: 100%;
   border: rgba($primary-font-color-black,.5) 1.4px solid;
-  background: #fff;
+  background: $primary-white;
   border-radius: .4rem;
+  transition:  all .2s ease-in-out;
+  animation: moveInUp .2s ease-in;
+  padding: 1rem;
+
+  &__name {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  &__days {
+    display: grid;
+    justify-content:center;
+    align-items:center;
+    grid-template-columns: repeat(7, 1fr);
+    color:$primary-font-color-black;
+    margin-bottom: 1rem;
+    //font-weight:600;
+
+
+    span {
+      width: 2rem;
+      justify-self: center;
+      align-self: center;
+      text-align: center;
+      font-size: 1.1rem;
+      color:$primary-font-color-black;
+    }
+  }
+
+  &__dates {
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    & button{
+      cursor: pointer;
+      outline: 0;
+      border: 0;
+      background: transparent;
+      font-size: 1.2rem;
+      justify-self: center;
+      align-self: center;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      margin: 2px 0;
+      transition-duration: .2s;
+      
+      &.today{
+        box-shadow:inset 0px 0px 0px 2px $font-color-logo;
+        background: $font-color-logo;
+        color: $primary-white;
+      }
+      
+      &:first-child{
+        grid-column:3;
+      }
+      
+      &:hover{
+        background:#eee;
+      }
+      
+      &:focus{
+        background:$primary-font-color-black;
+        color:$primary-white;
+        font-weight:600;
+      }
+    }
+  }
 }

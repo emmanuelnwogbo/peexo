@@ -1,7 +1,6 @@
 @keyframes moveInUp {
     0% {
-        opacity: 0;
-        transform: translateY(-10rem);
+        transform: translateY(-3rem);
     }
 
     80% {
@@ -10,14 +9,14 @@
 
     100% {
         opacity: 1;
-        transform: translate(0);
+        transform: translate(0); 
     }
 }
 
 @keyframes moveInDown {
   0% {
       opacity: 0;
-      transform: translateY(10rem);
+      transform: translateY(4rem);
   }
 
   80% {
