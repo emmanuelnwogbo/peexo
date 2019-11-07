@@ -11,4 +11,17 @@ mastMenuItems.forEach(item => {
       }
     })
   })
+});
+
+const menuBtn = document.getElementById('menu-btn');
+let menuOpen = false;
+
+menuBtn.addEventListener('click', function() {
+  if (menuOpen) {
+    menuOpen = false;
+    return this.parentElement.style.transform = `translateX(-100%)`;
+  }
+
+  menuOpen = true;
+  return this.parentElement.style.transform = `translateX(0)`;
 })

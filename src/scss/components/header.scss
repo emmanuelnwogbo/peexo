@@ -16,6 +16,40 @@
 
   &__menu {
 
+    @media only screen and (max-width: 64em) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      background: #fff;
+      z-index: 1000;
+      width: 50vw;
+      transition:  all .2s ease-in-out;
+      transform: translateX(-100%);
+    }
+
+    &--btn {
+      display: none;
+      
+      @media only screen and (max-width: 64em) {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: -9.4rem;
+        width: 8rem;
+        height: 5rem;
+
+        & span {
+          background: $primary-font-color-black;
+          display: inline-block;
+          height: 20%;
+          width: 90%;
+          margin: .2rem 0;
+          border-radius: 3rem;
+        }
+      }
+    }
+
     &--list {
       display: flex;
       text-decoration: none;
@@ -23,6 +57,12 @@
       font-weight: 500;
       font-size: 1.3rem;
       color: $primary-font-color-black;
+
+      @media only screen and (max-width: 64em) {
+        flex-direction: column;
+        padding: 4rem 0;
+        font-size: 3rem;
+      }
     }
 
     &--listitem {
@@ -30,6 +70,13 @@
       cursor: pointer;
       margin: 0 1.5rem;
       letter-spacing: .5px;
+
+      @media only screen and (max-width: 64em) {
+        margin: 1rem 0;
+        padding: 2rem;
+        background: $primary-font-color-black;
+        color: $primary-white;
+      }
     }
 
     &--brownitem {
