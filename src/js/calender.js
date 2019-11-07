@@ -106,7 +106,7 @@ function getCurrentDay() {
   let thisMonth = today.getMonth();
   let thisYear = today.getFullYear();
   if (thisMonth === g_currentMonth && thisYear === g_currentYear) {
-    console.log(today.getDate())
+    //console.log(today.getDate())
   	return today.getDate();
   }  
 }
