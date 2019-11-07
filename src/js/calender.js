@@ -90,14 +90,14 @@ function insertDates(numOfDays, month) {
         <button class="today">
           <time>${num}</time>
         </button>
-      `)
-    }
-
-    mon.insertAdjacentHTML('beforeend', `
+      `);
+    } else {
+      mon.insertAdjacentHTML('beforeend', `
       <button>
         <time>${num}</time>
       </button>
     `)
+    }
   }
 }
 

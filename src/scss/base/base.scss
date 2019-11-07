@@ -13,7 +13,23 @@ $font-color-logo: #f7b731;
 
 html {
   box-sizing: border-box;
-  font-size: 70%;
+  font-size: 71.5%;
+
+  @media only screen and (max-width: 112.5em) {
+    font-size: 65%;
+  }
+
+  @media only screen and (max-width: 100em) {
+    font-size: 57%;
+  }
+
+  @media only screen and (min-width: 156.25em) {
+    font-size: 90%;
+  }
+
+  @media only screen and (min-width: 187.5em) {
+    font-size: 108%;
+  }
 }
 
 body {
@@ -24,7 +40,7 @@ body {
   /*@media only screen and (max-width: 65.125em) {
     overflow: scroll;
     overflow-x: hidden;
-  }*/
+  }*/ 
 }
 
 .container {
@@ -32,4 +48,12 @@ body {
   width: 80vw;
   margin: 0 auto;
   padding-bottom: 4.7rem;
+
+  @media only screen and (max-width: 86.7em) {
+    width: 90vw;
+  }
+
+  @media only screen and (max-width: 75em) {
+    width: 100vw;
+  }
 }

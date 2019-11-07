@@ -17,6 +17,14 @@
     justify-content: space-between;
     padding: 0 12rem;
 
+    @media only screen and (max-width: 86.7em) {
+      padding: 0 6rem;
+    }
+
+    @media only screen and (max-width: 75.9em) {
+      padding: 0rem 3rem;
+    }
+
     &--figure {
       height: 16rem;
       width: 15rem;

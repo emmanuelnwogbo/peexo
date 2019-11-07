@@ -2,10 +2,18 @@
   padding: 3rem 12rem;
   background: rgba($font-color-logo,.1);
 
+  @media only screen and (max-width: 86.7em) {
+    padding: 3rem 0rem;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (max-width: 86.7em) {
+      padding: 0rem 10rem;
+    }
 
     &--afroshots {
       font-family: 'Playfair Display', serif;
@@ -15,7 +23,7 @@
 
     &--btns {
       display: flex;
-      width: 35%;
+      width: 41rem;
       height: 4.3rem;
       justify-content: space-between;
     }
