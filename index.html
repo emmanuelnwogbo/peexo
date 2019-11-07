@@ -5,143 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,500,700,900" rel="stylesheet">
-  <style>
-    @keyframes spinThree {
-      0% {
-        transform: rotate(0deg);
-      }
-    
-      100% {
-        transform: rotate(360deg);  
-      }
-    }
-    
-    .loadingscreen svg {
-      height: 100px;
-      width: 100px;
-      fill: #fff;
-      animation: spinThree 1s linear 1s infinite;
-    }
-
-    #app {
-      display: none;
-    }
-
-    .loadingscreen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(106, 0, 255,1);
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      opacity: 1;
-      z-index: 7000;
-      transition: all .2s ease-in-out;
-      backface-visibility: hidden;
-    }
-  </style>
-  <title>nerdyemmanuel</title>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900i&display=swap" rel="stylesheet">
+  <title>Peexo</title>
 </head>
 
 <body>
-  <div class='loadingscreen' id='loadingscreen'>
-    <span>
-      <svg>
-        <use xlink:href="./imgs/sprite.svg#icon-spinner10"/>
-      </svg> 
-    </span>
-  </div>
-  <div id='app'>
-    <div class='menu'>
-      <h3>nerdyemmanuel</h3>
-      <!--<div class='menu__list'>
-        <span class='open-portfolio'>My work</span>
-        <span>Contact me</span>
-      </div>--->
-    </div>
-    <div class='header'>
-      <div class='header__body'>
-        <div class='header__body--text'>
-          <p><span>HEY THERE, I AM</span><span>EMMANUEL NWOGBO</span></p>
-          <h3>Software Developer</h3>
-          <div class='header__btns'>
-            <button class='open-portfolio' id='open_form'>Contact me</button>
-            <span id='codepen-link' class='social-btns'>
-              <svg class='header__btns--svg'>
-                <use xlink:href="./imgs/sprite.svg#icon-codepen"/>
-              </svg> 
-            </span>
-            <span id='github-link' class='social-btns'>
-              <svg class='header__btns--svg'>
-                <use xlink:href="./imgs/sprite.svg#icon-github1"/>
-              </svg> 
-            </span>
-            <span id='instagram-link' class='social-btns'>
-              <svg class='header__btns--svg'>
-                <use xlink:href="./imgs/sprite.svg#icon-instagram"/>
-              </svg> 
-            </span>
-            <span id='twitter-link' class='social-btns'>
-              <svg class='header__btns--svg'>
-                <use xlink:href="./imgs/sprite.svg#icon-twitter"/>
-              </svg> 
-            </span>
+  <div class="container">
+      <header class='header'>
+          <div class='header__name'>
+            <div class='header__name--logo'>Peexoo</div>
+          </div>
+      
+          <div class='header__menu'>
+            <ul class='header__menu--list'>
+              <li class='header__menu--listitem'>I am a photographer</li>
+              <li class='header__menu--listitem'>Explore photos</li>
+              <li class='header__menu--listitem'>Find a photographer</li>
+              <li class='header__menu--listitem'>Find my photos</li>
+              <li class='header__menu--listitem header__menu--brownitem'>Login or Register</li>
+            </ul>
+          </div>
+        </header>
+        <div class='mast'>
+          
+          <div class='mast__bottom'>
+            <figure class='mast__bottom--figure'>
+              <img src='./imgs/guyholdingcam.jpg'/>
+            </figure>
+            <ul class='mast__bottom--menu'>
+              <li class='mast__bottom--menuitem'><span>Details</span></li>
+              <li class='mast__bottom--menuitem'><span>Portfolio</span></li>
+              <li class='mast__bottom--menuitem mast__bottom--menuitem-active'><span>Availability</span></li>
+              <li class='mast__bottom--menuitem'><span>Pricing Packages</span></li>
+              <li class='mast__bottom--menuitem'><span>Reviews</span></li>
+            </ul>
           </div>
         </div>
-      </div>
-      <div class='header__halfone header__half'></div>
-      <div class='header__halftwo header__half'>
-        <div class='portfolio' id='portfolio'>
-          <h3>My Portfolio</h3>
-        </div>
-      </div>
-      <div class='form' id='form'>
-        <form class='form__body' id='form--body'>
-          <div class='form__body__sending' id='sending-feedback'>
-            <div class='form__body__sending--body'>
-              <h3>Sending Message</h3>
-              <span>
-                <svg>
-                  <use xlink:href="./imgs/sprite.svg#icon-spinner10"/>
-                </svg> 
-              </span>
+
+        <div class='calender'>
+          <div class='calender__top'>
+            <div class='calender__top--afroshots'>Afroshots</div>
+            <div class='calender__top--btns'>
+              <button class='calender__top--btn calender__top--btn-transparent'>Message Photographer</button>
+              <button class='calender__top--btn calender__top--btn-yellow'>Book Now</button>
             </div>
           </div>
-          <span class='form__close' id='close-form'>
-            <svg class='form__close--svg'>
-              <use xlink:href="./imgs/sprite.svg#icon-cross"/>
-            </svg> 
-          </span>
-          <div class='form__body--header'>
-            <h2>Contact Me</h2>
-            <p>Please fill the form below.</p>
+          <div class='calender__middle'>
+            <div class='calender__middle--content'>
+              <div class='calender__middle--content-calenderbody' id='calender-body'>
+
+              </div>
+              <div class='calender__middle--content-nav'>
+                <span class='calender__middle--content-navbtn' id='calender-nav-left'>
+                  <svg>
+                    <use xlink:href="./imgs/sprite.svg#icon-chevron-thin-left"/>
+                  </svg>
+                </span>
+                <span class='calender__middle--content-circle'>
+                  <span></span>
+                </span>
+                <span class='calender__middle--content-navbtn' id='calender-nav-right'>
+                  <svg>
+                    <use xlink:href="./imgs/sprite.svg#icon-chevron-thin-right"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
           </div>
-          <div class='form__body--area'>
-            <label for="name">Please fill this input properly *</label>
-            <input type="text" id="name" name="name" placeholder="Fullname *" required>
+        </div>
+
+        <footer class='footer'>
+          <div class='footer__top'>
+            <div class='footer__top--left'>
+              <h2 class='footer__top--h2'>Quick Links</h2>
+              <ul class='footer__top--list'>
+                <li class='footer__top--listitem'>Find a photographer</li>
+                <li class='footer__top--listitem'>Find my photos</li>
+                <li class='footer__top--listitem'>Peexoomemories</li>
+                <li class='footer__top--listitem'>Become a photographer</li>
+              </ul>
+            </div>
+            <div class='footer__top--center'>
+              <h2 class='footer__top--h2'>Company</h2>
+              <ul class='footer__top--list'>
+                  <li class='footer__top--listitem'>About Us</li>
+                  <li class='footer__top--listitem'>FAQs</li>
+                  <li class='footer__top--listitem'>Pricing</li>
+                  <li class='footer__top--listitem'>Careers</li>
+                  <li class='footer__top--listitem'>Help and Support</li>
+                  <li class='footer__top--listitem'>Terms of Service</li>
+                  <li class='footer__top--listitem'>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class='footer__top--right'>
+              <h2 class='footer__top--h2'>Connect with Us</h2>
+              <ul class='footer__top--list'>
+                <li class='footer__top--listitem'>5A, Awudu Egheda,</li>
+                <li class='footer__top--listitem'>Lekki, Lagos.</li>
+                <li class='footer__top--listitem'>+234 8003229932</li>
+                <li class='footer__top--listitem'>customer.service@peexo.a</li>
+                <li class='footer__top--listitem footer__top--listitem-svgs'>
+                  <span>
+                    <svg class='footer__top--svg'>
+                      <use xlink:href="./imgs/sprite.svg#icon-whatsapp1"/>
+                    </svg>
+                  </span>
+                  <span>
+                    <svg class='footer__top--svg'>
+                      <use xlink:href="./imgs/sprite.svg#icon-facebook1"/>
+                    </svg>
+                  </span>
+                  <span>
+                    <svg class='footer__top--svg'>
+                      <use xlink:href="./imgs/sprite.svg#icon-twitter"/>
+                    </svg>
+                  </span>
+                  <span>
+                    <svg class='footer__top--svg'>
+                      <use xlink:href="./imgs/sprite.svg#icon-instagram"/>
+                    </svg>
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class='form__body--area'>
-            <label for="email">Please fill this input properly *</label>
-            <input type="email" id="email" name="email" placeholder="Email *" required>
-          </div>
-          <div class='form__body--area'>
-            <label for="subject">Please fill this input properly *</label>
-            <input type="text" id="subject" name="subject" placeholder="Subject *" required>
-          </div>
-          <div class='form__body--area'>
-            <label for="message">Please fill this input properly *</label>
-            <textarea placeholder="Your Message *" rows="7" name="message" id="message" required="" spellcheck="false"></textarea>
-          </div>
-          <input class='form__body--btn' type="submit" value="Send Message" id='send-message' name='submit'>
-        </form>
-      </div>
-    </div> 
-  </div> 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-<script type="text/javascript" src="runtime.a020aa93a0c7ae2878a3.js"></script><script type="text/javascript" src="vendors.a020aa93a0c7ae2878a3.js"></script><script type="text/javascript" src="main.a020aa93a0c7ae2878a3.js"></script></body>
+          <div class='footer__bottom'><p>© 2019 Peexo Nigeria Limited</p></div>
+        </footer>
+  </div>
+<script type="text/javascript" src="runtime.6847d421ad88909b050a.js"></script><script type="text/javascript" src="main.6847d421ad88909b050a.js"></script></body>
 </html>
