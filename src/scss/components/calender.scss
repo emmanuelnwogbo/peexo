@@ -1,5 +1,6 @@
 .calender {
   padding: 3rem 12rem;
+  background: rgba($font-color-logo,.1);
 
   &__top {
     display: flex;
@@ -47,10 +48,56 @@
   }
 
   &__middle {
+    position: relative;
 
+    &--content {
+      display: grid;
+      grid-template-rows: 30rem 10rem;
+      //background: blue;
+      margin-top: 10rem;
+      margin-bottom: 14rem;
+
+      &-calenderbody {
+        display: grid;
+        grid-template-columns: repeat(3, 32rem);
+        grid-auto-flow: column;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 2rem;
+      }
+
+      &-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &-circle {
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        background: #3d3d3d;    
+        display: inline-block;
+        margin: 0 1rem;
+        transform: translateY(-.2rem);
+      }
+
+      &-navbtn {
+        cursor: pointer;
+
+        & svg {
+          height: 3rem;
+          width: 3rem;
+          fill: $primary-font-color-black;
+        }
+      }
+    }
   }
+}
 
-  &__bottom {
-
-  }
+.month {
+  height: 100%;
+  border: rgba($primary-font-color-black,.5) 1.4px solid;
+  background: #fff;
+  border-radius: .4rem;
 }
