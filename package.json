@@ -36,6 +36,6 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.4.4",
-    "validator": "^11.1.0"
+    "validator": "^13.7.0"
   }
 }
